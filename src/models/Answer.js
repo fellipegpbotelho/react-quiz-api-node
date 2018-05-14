@@ -15,7 +15,8 @@ const Answer = new mongoose.Schema({
       default: false,
       required: true
     },
-  }]
+  }],
+  subject: { type: mongoose.SchemaTypes.ObjectId, ref: 'Subject' }
 })
 
 export default mongoose.model('Answer', Answer)
